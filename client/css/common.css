@@ -1,0 +1,17 @@
+body{
+    color: #444;
+    margin: 0;
+    padding: 0;
+    line-height: 180%;
+}
+nav ul{
+    list-style:none;
+    background: #7fc4fc88;
+    height: 30px   
+}
+nav ul li{
+    display: inline;
+    padding: 15pt;
+    color: #f5f107;
+    font-size: 20pt   
+}
