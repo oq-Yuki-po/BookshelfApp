@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-    <head>
-        <meta charset="UTF-8" />
-        <title>Top</title>
-        <link rel="stylesheet" type="text/css" href="../css/book_register.css" />
-        <link rel="stylesheet" type="text/css" href="../css/common.css" />
-        <script type="text/javascript" src="../js/common_layout.js"></script>
-    </head>
-    <body>
-        <script type="text/javascript">header();</script>
-        <section id="main">
-            <h2>Register</h2>
-                <input type="text" placeholder="ISBN" class="register_text"></input>
-                <button class="btn register">Register</button>
+<head>
+    <meta charset="UTF-8" />
+    <title>Top</title>
+    <link rel="stylesheet" type="text/css" href="../css/book_register.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <script type="text/javascript" src="../js/common_layout.js"></script>
+</head>
 
-        </section>
-        <script type="text/javascript" src="../js/book_register.js"></script>
-    </body>
+<body>
+    <script type="text/javascript">header();</script>
+    <section id="main">
+        <h2>Register</h2>
+        <div class="label_with_input">
+            <label for="isbn">ISBN</label>
+            <input type="text" id="isbn" placeholder="ISBN"></input>
+        </div>
+        <button class="btn register">Register</button>
+    </section>
+    <script type="text/javascript" src="../js/book_register.js"></script>
+</body>
 
 </html>
