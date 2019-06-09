@@ -4,6 +4,9 @@ body{
     padding: 0;
     line-height: 180%;
 }
+section h2{
+    margin: 0;
+}
 nav ul{
     list-style:none;
     background: #7fc4fc88;
@@ -14,4 +17,19 @@ nav ul li{
     padding: 15pt;
     color: #f5f107;
     font-size: 20pt   
+}
+.btn {
+	width: 160px;
+	padding: 0.8em;
+	text-align: center;
+	text-decoration: none;
+	color: #EC407A;
+	border: 2px solid #EC407A;
+	border-radius: 10px;
+    transition: .4s;
+    font-size: 14px;
+}
+.btn:hover {
+	background: #EC407A;
+	color: #fff;
 }
