@@ -9,7 +9,7 @@ services:
     container_name: BookShelfUwsgi
     # 指定したパスをコンテナにマウントする。"ホストのパス:コンテナのパス"となる
     volumes:
-      - ./api:/var/www/
+      - ./api:/var/api/
     # 解放するポートを指定。"ホスト:コンテナ"のマッピング となる
     ports:
       - "3031:3031"
