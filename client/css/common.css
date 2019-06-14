@@ -7,6 +7,38 @@ body{
 section h2{
     margin: 0;
 }
+
+.label_with_input{
+    width: 220px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.label_with_input label{
+    width: 100px;
+    display: inline-block;
+    margin: 5px;
+    font-size: 22px;
+}
+
+#main {
+    border: 2px solid black;
+    width: 700px;
+    padding: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 10px;
+}
+
+section input[type="text"]{
+    border-radius: 5px;
+    margin: 5px;
+    width: 200px;
+    height: 25px;
+    font-size: 22px;
+    text-align: center;
+}
+
 nav ul{
     list-style:none;
     background: #7fc4fc88;
@@ -28,8 +60,11 @@ nav ul li{
 	border-radius: 10px;
     transition: .4s;
     font-size: 14px;
+    display: block;
+    margin-left: auto;
 }
 .btn:hover {
 	background: #EC407A;
-	color: #fff;
+    color: #fff;
+    cursor: pointer;
 }
