@@ -44,3 +44,18 @@ services:
     user: root
     environment:
       TZ: "Asia/Tokyo"
+  
+  pgadmin4:
+    image: dpage/pgadmin4:3.3
+    container_name: BookShelfPgadmin4
+    ports:
+      - 80:80
+    volumes:
+      - ./pgadmin:/var/lib/pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: root
+      PGADMIN_DEFAULT_PASSWORD: root
+    depends_on:
+          - postgresql
+    hostname: pgadmin4
+  
