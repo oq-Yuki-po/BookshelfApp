@@ -1,13 +1,11 @@
-import sys
 from datetime import datetime
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import (Column, String, Text, ForeignKey, Integer, DateTime,
-                        create_engine, MetaData, DECIMAL, DATETIME, exc, event, Index)
-from sqlalchemy.orm import (sessionmaker, relationship, scoped_session)
+from sqlalchemy import (Column, String, ForeignKey, Integer, DateTime)
+from sqlalchemy.orm import relationship
 from api.setting import Base
 from api.setting import ENGINE
 
 from api.models.ModelAuthor import Author
+
 
 class Book(Base):
     """
@@ -22,13 +20,13 @@ class Book(Base):
     created_at = Column(DateTime, default=datetime.now, nullable=False)
     updated_at = Column(DateTime, default=datetime.now, nullable=False)
     authors = relationship('Author', backref="books")
-    
 
-
-    def __init__(self, title,isbn,cover_path):
+    def __init__(self, title, isbn, cover_path, author_id):
         self.title = title
         self.isbn = isbn
         self.cover_path = cover_path
+        self.author_id = author_id
+
 
 if __name__ == "__main__":
     Base.metadata.create_all(bind=ENGINE)
