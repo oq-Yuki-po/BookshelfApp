@@ -12,10 +12,10 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /var
 
 # 依存Pythonライブラリ一覧コピー
-COPY requirements.txt ./var/api/
+COPY requirements.txt /var/api/
 
 # 依存Pythonライブラリインストール
-RUN pip install --no-cache-dir -r var/api/requirements.txt
+RUN pip install --no-cache-dir -r /var/api/requirements.txt
 
 # uwsgiの起動
 CMD ["uwsgi","--ini","/var/api/uwsgi.ini"]
