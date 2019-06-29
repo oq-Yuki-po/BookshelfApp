@@ -3,3 +3,4 @@ uwsgi
 requests
 sqlalchemy
 psycopg2
+flask-marshmallow
