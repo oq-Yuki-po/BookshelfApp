@@ -16,7 +16,7 @@ function make_table(json) {
   document.getElementById("search_result").textContent = null;
   for (var i = 0; i < json.length; i++) {
     var div = document.createElement("div");
-    div.classList.add("col-3");
+    div.classList.add("col-5");
     var title = document.createElement("h6");
     title.innerText = `${json[i]['title']}`;
     title.classList.add('title');
