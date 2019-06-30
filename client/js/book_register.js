@@ -6,7 +6,7 @@ function register() {
       }
     };
     const isbn = document.getElementById('isbn').value;
-    xhttp.open("POST", "/api/books/", true);
+    xhttp.open("POST", "/api/books", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send(`isbn=${isbn}`);
   }
