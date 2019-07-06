@@ -1,3 +1,7 @@
+document.getElementById('search').onclick = function(){
+  search();
+}
+
 function search() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
