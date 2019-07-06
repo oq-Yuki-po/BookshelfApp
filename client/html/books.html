@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Book Search</title>
+    <link rel="stylesheet" type="text/css" href="../css/books.css" />
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+    <section id="side">
+        <div class="input_form">
+            <label for="title">TITLE</label>
+            <input type="text" id="title" placeholder="TITLE"></input>
+        </div>
+        <div class="input_form">
+            <label for="author">AUTHOR</label>
+            <input type="text" id="author" placeholder="AUTHOR"></input>
+        </div>
+        <button id="search" class="btn btn_search"><i class="fas fa-search fa-lg"></i></button>
+        <div class="input_form">
+            <label for="isbn">ISBN</label>
+            <input type="text" id="isbn" placeholder="ISBN"></input>
+            <button id="register" class="btn btn_register"><i class="fas fa-book"></i></button>
+        </div>
+        
+    </section>
+    <section id="search_result">
+    </section>
+
+    <script type="text/javascript" src="../js/books.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+</body>
+
+</html>
