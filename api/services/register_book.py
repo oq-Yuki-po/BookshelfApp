@@ -28,6 +28,9 @@ def register_book(target_isbn):
     else:
         model_book = Book(title, isbn, cover, db_author[0].id)
     session.add(model_book)
+    
     session.commit()
+
+    session.close()
 
     return title
