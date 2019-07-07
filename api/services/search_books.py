@@ -11,5 +11,7 @@ def search_books(title, author):
         filter(Book.title.like('%{}%'.format(title))).\
         filter(Author.name.like('%{}%'.format(author))).\
         all()
+        
+    session.close()
 
     return jsonify(BookSchema(many=True).dump(db_books).data)
