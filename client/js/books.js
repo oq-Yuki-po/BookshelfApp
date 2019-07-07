@@ -6,15 +6,15 @@ document.getElementById('register').onclick = function () {
   register();
 }
 
-document.getElementById('title').onkeypress = function(e){onKeyPress(e)};
-document.getElementById('author').onkeypress = function(e){onKeyPress(e)};
-document.getElementById('isbn').onkeypress = function(e){onKeyPress(e)};
+document.getElementById('title').onkeypress = function (e) { onKeyPress(e) };
+document.getElementById('author').onkeypress = function (e) { onKeyPress(e) };
+document.getElementById('isbn').onkeypress = function (e) { onKeyPress(e) };
 
 function onKeyPress(e) {
   if (e.keyCode === 13) {
-    if (e.currentTarget.id == "title" || e.currentTarget.id == "author"){
+    if (e.currentTarget.id == "title" || e.currentTarget.id == "author") {
       search();
-    }else{
+    } else {
       register();
     }
   }
@@ -59,6 +59,10 @@ function make_search_result(json) {
     title.innerText = book_title;
     title.classList.add('title');
     div.appendChild(title);
+    var author = document.createElement("span");
+    author.innerText = book_author;
+    author.classList.add('book_info');
+    div.appendChild(author);
     var img = document.createElement('img');
     if (json[i]['cover_path'] != '') {
       img.src = `${json[i]['cover_path']}`;
@@ -66,19 +70,18 @@ function make_search_result(json) {
       img.src = `/img/no_img.png`;
     }
     img.classList.add('cover');
-    img.addEventListener('click', function () {
-      display_book_info(book_title, book_author);
-    },
-      false);
+    img.addEventListener('click', function (e) { display_book_info(e); }, false);
     div.appendChild(img);
     document.getElementById("search_result").appendChild(div);
   }
   document.getElementById("search_result").classList.add('search_result');
 }
 
-function display_book_info(title, author) {
+function display_book_info(e) {
+  var author = e.currentTarget.previousElementSibling;
+  var title = author.previousElementSibling;
   Swal.fire({
-    html: `${title}<br>${author}`,
+    html: `${title.textContent}<br>${author.textContent}`,
     type: 'info',
     width: '64rem'
   })
