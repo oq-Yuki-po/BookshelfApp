@@ -6,6 +6,21 @@ document.getElementById('register').onclick = function () {
   register();
 }
 
+document.getElementById('title').onkeypress = function(e){onKeyPress(e)};
+document.getElementById('author').onkeypress = function(e){onKeyPress(e)};
+document.getElementById('isbn').onkeypress = function(e){onKeyPress(e)};
+
+function onKeyPress(e) {
+  if (e.keyCode === 13) {
+    if (e.currentTarget.id == "title" || e.currentTarget.id == "author"){
+      search();
+    }else{
+      register();
+    }
+  }
+  return
+}
+
 function search() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
@@ -22,7 +37,7 @@ function search() {
 
 function register() {
   var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
+  xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       alert(this.responseText)
     }
