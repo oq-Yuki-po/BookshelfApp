@@ -6,12 +6,27 @@ document.getElementById('register').onclick = function () {
   register();
 }
 
+document.getElementById('title').onkeypress = function(e){onKeyPress(e)};
+document.getElementById('author').onkeypress = function(e){onKeyPress(e)};
+document.getElementById('isbn').onkeypress = function(e){onKeyPress(e)};
+
+function onKeyPress(e) {
+  if (e.keyCode === 13) {
+    if (e.currentTarget.id == "title" || e.currentTarget.id == "author"){
+      search();
+    }else{
+      register();
+    }
+  }
+  return
+}
+
 function search() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       response = JSON.parse(this.responseText);
-      make_table(response);
+      make_search_result(response);
     }
   };
   const title = document.getElementById("title").value;
@@ -22,7 +37,7 @@ function search() {
 
 function register() {
   var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
+  xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       alert(this.responseText)
     }
@@ -33,7 +48,7 @@ function register() {
   xhttp.send(`isbn=${isbn}`);
 }
 
-function make_table(json) {
+function make_search_result(json) {
   document.getElementById("search_result").textContent = null;
   for (var i = 0; i < json.length; i++) {
     var book_title = json[i]['title'];
