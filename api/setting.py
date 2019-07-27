@@ -23,7 +23,7 @@ class RepresentableBase(object):
         )
 
 # postgresqlのDBの設定
-DATABASE = "postgresql://postgres:@192.168.1.11:5432/bookshelf"
+DATABASE = "postgresql://postgres:@192.168.1.19:5432/bookshelf"
 
 ENGINE = create_engine(
     DATABASE,
