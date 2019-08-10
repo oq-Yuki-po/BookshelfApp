@@ -1,0 +1,57 @@
+@import "_variable";
+
+$font_family-title: "ChangaOne";
+$font_family-news: "ChangaOne";
+$container_background_color: rgb(255, 255, 255);
+$news_box_height: 5em;
+
+.container {
+  width: 100%;
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: $sapce-lg;
+  background: $container_background_color;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  &-body {
+    font-size: $font_size-md;
+    height: 100%;
+  }
+  &-title {
+    width: 75%;
+    font-size: $font_size-xl;
+    text-align: center;
+    font-family: $font_family-title;
+    padding-top: $sapce-sm;
+    padding-bottom: $sapce-sm;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &-ornament {
+    .container-title {
+      span {
+        display: inline-block;
+        background: $container_background_color;
+        padding: 0 10px;
+        position: relative;
+        z-index: 1;
+      }
+      &:before,
+      &:after {
+        border-top: 1px solid #2e1f1a;
+        content: "";
+        display: block;
+        position: relative;
+        z-index: 0;
+      }
+      &:before {
+        top: 16px;
+      }
+      &:after {
+        top: -16px;
+      }
+    }
+  }
+}

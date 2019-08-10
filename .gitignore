@@ -3,3 +3,5 @@
 DB/data/*
 pgadmin/*
 __pycache__
+node_modules
+.python-version

@@ -4,29 +4,30 @@
 <head>
     <meta charset="UTF-8" />
     <title>Book Search</title>
-    <link rel="stylesheet" type="text/css" href="../css/books.css" />
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/books_scss.css" />
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 </head>
 
 <body>
-    <section id="side">
+    <section id="side" class="side-bar">
         <div class="input_form">
-            <label for="title">TITLE</label>
-            <input type="text" id="title" placeholder="TITLE"></input>
+            <label for="title" class="side-bar-label">TITLE</label>
+            <input type="text" id="title" class="side-bar-textbox" placeholder="TITLE" ></input>
         </div>
         <div class="input_form">
-            <label for="author">AUTHOR</label>
-            <input type="text" id="author" placeholder="AUTHOR"></input>
+            <label for="author" class="side-bar-label">AUTHOR</label>
+            <input type="text" id="author" class="side-bar-textbox" placeholder="AUTHOR"></input>
         </div>
-        <button id="search" class="btn btn_search"><i class="fas fa-search fa-lg"></i></button>
+        <button id="search" class="btn btn-search"><i class="fas fa-search fa-lg"></i></button>
         <div class="input_form">
-            <label for="isbn">ISBN</label>
-            <input type="text" id="isbn" placeholder="ISBN"></input>
-            <button id="register" class="btn btn_register"><i class="fas fa-book"></i></button>
+            <label for="isbn" class="side-bar-label">ISBN</label>
+            <input type="text" id="isbn" class="side-bar-textbox" placeholder="ISBN"></input>
+            <button id="register" class="btn btn-register"><i class="fas fa-book"></i></button>
         </div>
         
     </section>
-    <section id="search_result">
+    <section id="search_result" class="main-contents">
     </section>
 
     <script type="text/javascript" src="../js/books.js"></script>

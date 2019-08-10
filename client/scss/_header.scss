@@ -1,0 +1,42 @@
+@import "_variable";
+
+$header_font_color-default: rgba(0, 4, 250, 0.76);
+$font_color-hover: rgb(253, 1, 1);
+
+.header {
+  width: 100%;
+  height: $header_height;
+  background: none;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 2;
+  font-family: "ChangaOne";
+  color: $header_font_color-default;
+  &-title {
+    font-size: $font_size-xl;
+    padding: $sapce-sm;
+  }
+  &-nav {
+    padding: $sapce-sm;
+  }
+  &-menu {
+    display: flex;
+    .menu-item {
+      padding: $sapce-md;
+    }
+    .menu-link {
+      font-size: $font_size-lg;
+      cursor: pointer;
+      color: inherit;
+      &:hover {
+        color: $font_color-hover;
+        transition: 0.3s;
+      }
+    }
+  }
+  &.float-active {
+    background: rgb(31, 31, 31);
+    color: #fff;
+  }
+}

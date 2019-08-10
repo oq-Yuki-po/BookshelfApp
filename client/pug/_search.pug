@@ -1,0 +1,22 @@
+- 
+  var textbox = [
+                {placeholder:'TITLE',id:'title',name:'タイトル'},
+                {placeholder:'AUTHOR',id:'author',name:'著者'},
+                {placeholder:'ISBN',id:'isbn',name:'ISBN'},
+              ]
+section.container.container-ornament#search
+  h2.container-title
+    span SEARCH
+  .container-body
+    #hamburger.hamburger.js-toggle-sp-menu
+      span.bar.top
+      span.bar.middle
+      span.bar.bottom
+    section.search
+          .search-form
+            each item in textbox
+                label(for=item['id']).search-form-label #{item.name}
+                input(type="text",placeholder=item['placeholder'],id=item['id'])
+            button Register
+            button Searchs
+    section.search-result#search-result

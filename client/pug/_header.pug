@@ -1,0 +1,15 @@
+- 
+  var title = [
+                {title:'TOP',id:'#top'},
+                //- {title:'NEWS',id:'#news'},
+                {title:'SEARCH',id:'#search'},
+                //- {title:'PRODUCER',id:'#producer'}
+              ]
+
+header.header#float-menu
+    h1.header-title Developer's Library
+    nav.header-nav
+      ul.header-menu
+        each item in  title
+          li.menu-item
+            a(href=item['id']).menu-link #{item['title']}
