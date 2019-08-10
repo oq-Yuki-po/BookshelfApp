@@ -1,0 +1,23 @@
+{
+    "name": "client",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "watch": "yarn watch-scss & yarn watch-pug",
+        "build-scss": "node-sass client/scss --output client/css",
+        "watch-scss": "nodemon -e scss -x \"npm run build-scss\"",
+        "build-pug": "pug client/pug/ --hierarchy -o client/html/ -P",
+        "watch-pug": "pug client/pug/ --hierarchy -o client/html/ -P -w"
+    },
+    "devDependencies": {
+        "node-sass": "^4.9.4",
+        "nodemon": "^1.18.4",
+        "pug": "^2.0.4",
+        "pug-cli": "^1.0.0-alpha6",
+        "pug-loader": "^2.4.0",
+        "reset-css": "^4.0.1",
+        "sweetalert2": "^8.15.0"
+    },
+    "dependencies": {}
+}
