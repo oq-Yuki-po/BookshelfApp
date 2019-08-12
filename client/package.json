@@ -5,10 +5,10 @@
     "license": "MIT",
     "scripts": {
         "watch": "yarn watch-scss & yarn watch-pug",
-        "build-scss": "node-sass client/scss --output client/css",
+        "build-scss": "node-sass scss --output css",
         "watch-scss": "nodemon -e scss -x \"npm run build-scss\"",
-        "build-pug": "pug client/pug/ --hierarchy -o client/html/ -P",
-        "watch-pug": "pug client/pug/ --hierarchy -o client/html/ -P -w"
+        "build-pug": "pug pug/ --hierarchy -o html/ -P",
+        "watch-pug": "pug pug/books.pug --hierarchy -o html/ -P -w"
     },
     "devDependencies": {
         "node-sass": "^4.9.4",

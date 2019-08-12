@@ -35,11 +35,12 @@ $side-bar-color: linear-gradient(rgba(185, 255, 144, 0.87), rgba(110, 255, 27, 0
   box-sizing: border-box;
   width: 80%;
   display: inline-block;
+  overflow-y: auto;
 }
 .panel {
   display: block;
-  width: 200px;
-  height: 300px;
+  width: 160px;
+  height: 250px;
   box-sizing: border-box;
   border-radius: 10px;
   padding: 5px;
@@ -65,4 +66,8 @@ $side-bar-color: linear-gradient(rgba(185, 255, 144, 0.87), rgba(110, 255, 27, 0
 
 .book_info {
   display: none;
+}
+
+.swal2-image{
+  border: 1px solid black;
 }

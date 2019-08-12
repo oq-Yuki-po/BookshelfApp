@@ -1,11 +1,8 @@
-@import "../../node_modules/reset-css/sass/_reset";
-@import "../../node_modules/sweetalert2/src/sweetalert2.scss";
+@import "../node_modules/reset-css/sass/_reset";
+@import "../node_modules/sweetalert2/src/sweetalert2.scss";
 @import "_header";
 @import "_hero";
 @import "_container";
 @import "_news";
 @import "_search";
 @import "_button";
-
-// $font_family-default:Meiryo;
-// $font_family-title:cursive;

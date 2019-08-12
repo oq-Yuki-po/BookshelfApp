@@ -1,7 +1,6 @@
-var targetHeight = document.getElementById('float-menu-target').clientHeight;
-
 window.onscroll = function()
 {   
+    var targetHeight = document.getElementById('float-menu-target').clientHeight;
     var current_height = document.documentElement.scrollTop || document.body.scrollTop;
     var header = document.getElementById('float-menu')
     if(current_height > targetHeight -10){
@@ -87,15 +86,16 @@ function make_search_result(json) {
     div.appendChild(img);
     document.getElementById("search_result").appendChild(div);
   }
-  document.getElementById("search_result").classList.toggle('search-result');
 }
 
 function display_book_info(e) {
   var author = e.currentTarget.previousElementSibling;
   var title = author.previousElementSibling;
   Swal.fire({
+    imageUrl: e.currentTarget.currentSrc,
+    imageWidth: 180,
+    imageHeight: 270,
     html: `${title.textContent}<br>${author.textContent}`,
-    type: 'info',
     width: '64rem'
   })
 }
