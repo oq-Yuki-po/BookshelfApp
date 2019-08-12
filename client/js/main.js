@@ -10,9 +10,3 @@ window.onscroll = function()
         header.classList.remove("float-active");
     }
 }
-
-var hamburger = document.getElementById('hamburger');
-
-hamburger.onclick = function () {
-    
-}

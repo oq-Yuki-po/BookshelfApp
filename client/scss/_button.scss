@@ -1,0 +1,38 @@
+.btn {
+    width: 45%;
+    padding: 0.8em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: .4s;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: rgb(34, 208, 235);
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn_search {
+    color: rgb(34, 208, 235);
+    border: 2px solid rgb(34, 208, 235);
+}
+
+.btn_search:hover {
+    background: rgb(34, 208, 235);
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn_register {
+    color: rgb(235, 34, 155);
+    border: 2px solid rgb(235, 34, 155);
+}
+
+.btn_register:hover {
+    background: rgb(235, 34, 155);
+    color: #fff;
+    cursor: pointer;
+}

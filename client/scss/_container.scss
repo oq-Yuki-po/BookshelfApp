@@ -17,6 +17,7 @@ $news_box_height: 5em;
   flex-direction: column;
   &-body {
     font-size: $font_size-md;
+    width: 80%;
     height: 100%;
   }
   &-title {

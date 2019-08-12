@@ -1,37 +1,42 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-<head>
-    <meta charset="UTF-8" />
-    <title>Book Search</title>
-    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="../css/books_scss.css" />
-    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-</head>
-
-<body>
-    <section id="side" class="side-bar">
-        <div class="input_form">
-            <label for="title" class="side-bar-label">TITLE</label>
-            <input type="text" id="title" class="side-bar-textbox" placeholder="TITLE" ></input>
-        </div>
-        <div class="input_form">
-            <label for="author" class="side-bar-label">AUTHOR</label>
-            <input type="text" id="author" class="side-bar-textbox" placeholder="AUTHOR"></input>
-        </div>
-        <button id="search" class="btn btn-search"><i class="fas fa-search fa-lg"></i></button>
-        <div class="input_form">
-            <label for="isbn" class="side-bar-label">ISBN</label>
-            <input type="text" id="isbn" class="side-bar-textbox" placeholder="ISBN"></input>
-            <button id="register" class="btn btn-register"><i class="fas fa-book"></i></button>
-        </div>
-        
-    </section>
-    <section id="search_result" class="main-contents">
-    </section>
-
+  <head>
+    <meta charset="UTF-8">
+    <title>Book Shelf</title>
+    <link rel="stylesheet" href="../css/main.css">
+  </head>
+  <body>
+    <header class="header" id="float-menu">
+      <h1 class="header-title">Developer's Library</h1>
+      <nav class="header-nav">
+        <ul class="header-menu">
+          <li class="menu-item"><a class="menu-link" href="#top">TOP</a></li>
+          <li class="menu-item"><a class="menu-link" href="#menu-search">SEARCH</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero" id="float-menu-target">
+        <h2 class="hero-title">Developer's Library</h2>
+      </section>
+      <section class="searc-main" id="menu-search">
+        <section class="search">
+          <div class="search-form">
+            <label class="search-form-label" for="title">タイトル</label>
+            <input class="search-form-text" type="text" placeholder="TITLE" id="title">
+            <label class="search-form-label" for="author">著者</label>
+            <input class="search-form-text" type="text" placeholder="AUTHOR" id="author">
+            <label class="search-form-label" for="isbn">ISBN</label>
+            <input class="search-form-text" type="text" placeholder="ISBN" id="isbn">
+            <button class="btn btn_register" id="register">Register</button>
+            <button class="btn btn_search" id="search">Searchs</button>
+          </div>
+        </section>
+        <section id="search_result"></section>
+      </section>
+    </main>
+    <script type="text/javascript" src="../js/main.js"></script>
     <script type="text/javascript" src="../js/books.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-</body>
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+  </body>
 </html>

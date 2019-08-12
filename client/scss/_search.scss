@@ -1,27 +1,68 @@
 @import "_variable";
 
-$side-bar-color: linear-gradient(rgba(2, 251, 255, 0.87), rgba(248, 0, 145, 0.637));
-.hamburger {
-  height: 5%;
-  cursor: pointer;
-  transition: all 0.7s ease;
-  width: 50px;
+$side-bar-color: linear-gradient(rgba(185, 255, 144, 0.87), rgba(110, 255, 27, 0.87));
+.searc-main{
+  display: flex;
+  height: 100vh;
 }
 .search {
-  height: 95%;
-  display: inline-block;
+  height: 100%;
   width: 20%;
   background: $side-bar-color;
+  display: inline-block;
   &-form {
     display: block;
+    padding-top: $header_height;
+    box-sizing: border-box;
     &-label {
       width: 100%;
       display: block;
+    }
+    &-text{
+      display: block;
+      width: 80%;
+      border-radius: 5px;
+      margin: 5px;
+      height: 25px;
+      font-size: 22px;
+      text-align: center;
     }
   }
 }
 
 .search-result {
-  width: 70%;
+  padding-top: $header_height;
+  box-sizing: border-box;
+  width: 80%;
   display: inline-block;
+}
+.panel {
+  display: block;
+  width: 200px;
+  height: 300px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 5px;
+  display: inline-block;
+  border: 2px solid #0000004f
+}
+
+.title {
+  font-size: 12px;
+  margin: 0.5px;
+  display: block;
+  max-width: 80%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.cover {
+  width: 100%;
+  height: 90%;
+}
+
+.book_info {
+  display: none;
 }
