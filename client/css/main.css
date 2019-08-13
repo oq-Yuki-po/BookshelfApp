@@ -1117,19 +1117,25 @@ body.swal2-no-backdrop .swal2-shown {
   font-family: "ChangaOne";
   src: url("../fonts/ChangaOne.ttf") format("truetype"); }
 
-.searc-main {
+.search-main {
   display: flex;
-  height: 100vh; }
+  height: 100vh;
+  position: relative; }
 
 .search {
   height: 100%;
   width: 20%;
   background: linear-gradient(rgba(185, 255, 144, 0.87), rgba(110, 255, 27, 0.87));
-  display: inline-block; }
+  display: inline-block;
+  transition: 0.8s; }
+  .search.hidden {
+    width: 0%; }
   .search-form {
     display: block;
-    padding-top: 80px;
+    padding-top: 120px;
     box-sizing: border-box; }
+    .search-form.hidden {
+      display: none; }
     .search-form-label {
       width: 100%;
       display: block; }
@@ -1143,16 +1149,20 @@ body.swal2-no-backdrop .swal2-shown {
       text-align: center; }
 
 .search-result {
-  padding-top: 80px;
+  padding-top: 120px;
   box-sizing: border-box;
   width: 80%;
   display: inline-block;
-  overflow-y: auto; }
+  overflow-y: auto;
+  transition: 0.8s; }
+  .search-result.hidden {
+    width: 100%;
+    margin-left: 40PX; }
 
 .panel {
   display: block;
-  width: 160px;
-  height: 250px;
+  width: 155px;
+  height: 240px;
   box-sizing: border-box;
   border-radius: 10px;
   padding: 5px;
@@ -1178,6 +1188,50 @@ body.swal2-no-backdrop .swal2-shown {
 
 .swal2-image {
   border: 1px solid black; }
+
+.menu-trigger,
+.menu-trigger span {
+  display: block;
+  transition: all 0.4s;
+  box-sizing: border-box; }
+
+.menu-trigger {
+  position: absolute;
+  width: 35px;
+  height: 36px;
+  top: 80px;
+  left: 6px; }
+  .menu-trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    border-radius: 4px; }
+    .menu-trigger span:nth-of-type(1) {
+      top: 8px; }
+    .menu-trigger span:nth-of-type(2) {
+      top: 18px; }
+      .menu-trigger span:nth-of-type(2)::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        width: 100%;
+        height: 3px;
+        background-color: black;
+        border-radius: 4px;
+        transition: all 0.4s; }
+    .menu-trigger span:nth-of-type(3) {
+      bottom: 5px; }
+  .menu-trigger.active span:nth-of-type(1) {
+    transform: translateY(20px) scale(0); }
+  .menu-trigger.active span:nth-of-type(2) {
+    transform: rotate(-45deg); }
+  .menu-trigger.active span:nth-of-type(2)::after {
+    transform: rotate(90deg); }
+  .menu-trigger.active span:nth-of-type(3) {
+    transform: translateY(-20px) scale(0); }
 
 .btn {
   width: 45%;

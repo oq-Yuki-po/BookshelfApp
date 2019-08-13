@@ -4,9 +4,14 @@
                 {placeholder:'AUTHOR',id:'author',name:'著者'},
                 {placeholder:'ISBN',id:'isbn',name:'ISBN'},
               ]
-section#menu-search.searc-main
-  section.search
-        .search-form
+
+section#menu-search.search-main
+  a.menu-trigger#menu-trigger
+    span
+    span
+    span
+  section.search#search-area
+        .search-form#search-form
           each item in textbox
               label(for=item['id']).search-form-label #{item.name}
               input(type="text",placeholder=item['placeholder'],id=item['id']).search-form-text

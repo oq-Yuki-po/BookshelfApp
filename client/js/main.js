@@ -10,3 +10,14 @@ window.onscroll = function()
         header.classList.remove("float-active");
     }
 }
+
+var menu_trigger = document.getElementById("menu-trigger");
+var search_area = document.getElementById("search-area");
+var search_form = document.getElementById("search-form");
+var search_result = document.getElementById("search_result");
+menu_trigger.onclick = function(){
+    menu_trigger.classList.toggle("active");
+    search_form.classList.toggle("hidden");
+    search_result.classList.toggle("hidden");
+    search_area.classList.toggle("hidden");
+} 
