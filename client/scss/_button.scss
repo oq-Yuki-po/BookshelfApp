@@ -1,38 +1,41 @@
-.btn {
-    width: 45%;
-    padding: 0.8em;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 10px;
-    transition: .4s;
-    font-size: 14px;
-    display: inline-block;
-}
+@import "_variable";
 
-.btn:hover {
-    background: rgb(34, 208, 235);
-    color: #fff;
+$btn-search-color: rgb(37, 220, 248);
+$btn-register-color: rgb(235, 34, 155);
+$btn-hover-color: #fff;
+$btn-border-width: 2px;
+
+.btn {
+  width: 45%;
+  padding: $sapce-md;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.4s;
+  font-size: $font_size-md;
+  margin: $sapce-md;
+  &:hover {
+    color: $btn-hover-color;
     cursor: pointer;
+  }
 }
 
 .btn_search {
-    color: rgb(34, 208, 235);
-    border: 2px solid rgb(34, 208, 235);
-}
-
-.btn_search:hover {
-    background: rgb(34, 208, 235);
-    color: #fff;
-    cursor: pointer;
+  color: $btn-search-color;
+  border-color: $btn-search-color;
+  border-style: solid;
+  border-width: $btn-border-width;
+  &:hover {
+    background: $btn-search-color;
+  }
 }
 
 .btn_register {
-    color: rgb(235, 34, 155);
-    border: 2px solid rgb(235, 34, 155);
-}
-
-.btn_register:hover {
-    background: rgb(235, 34, 155);
-    color: #fff;
-    cursor: pointer;
+  color: $btn-register-color;
+  border-color: $btn-register-color;
+  border-style: solid;
+  border-width: $btn-border-width;
+  &:hover {
+    background: $btn-register-color;
+  }
 }
