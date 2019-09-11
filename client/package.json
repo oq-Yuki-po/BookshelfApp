@@ -11,6 +11,7 @@
         "watch-pug": "pug pug/books.pug --hierarchy -o html/ -P -w"
     },
     "devDependencies": {
+        "@fortawesome/fontawesome-free": "^5.10.1",
         "node-sass": "^4.9.4",
         "nodemon": "^1.18.4",
         "pug": "^2.0.4",
