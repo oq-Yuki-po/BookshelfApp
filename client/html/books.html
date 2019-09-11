@@ -10,7 +10,7 @@
       <h1 class="header-title">Developer's Library</h1>
       <nav class="header-nav">
         <ul class="header-menu">
-          <li class="menu-item"><a class="menu-link" href="#top">TOP</a></li>
+          <li class="menu-item"><a class="menu-link" href="#float-menu-target">TOP</a></li>
           <li class="menu-item"><a class="menu-link" href="#menu-search">SEARCH</a></li>
         </ul>
       </nav>
@@ -19,7 +19,7 @@
       <section class="hero" id="float-menu-target">
         <h2 class="hero-title">Developer's Library</h2>
       </section>
-      <section class="search-main" id="menu-search"><a class="menu-trigger" id="menu-trigger"><span></span><span></span><span></span></a>
+      <section class="search-container" id="menu-search"><a class="menu-trigger active" id="menu-trigger"><span></span><span></span><span></span></a>
         <section class="search" id="search-area">
           <div class="search-form" id="search-form">
             <label class="search-form-label" for="title">タイトル</label>
@@ -28,8 +28,10 @@
             <input class="search-form-text" type="text" placeholder="AUTHOR" id="author">
             <label class="search-form-label" for="isbn">ISBN</label>
             <input class="search-form-text" type="text" placeholder="ISBN" id="isbn">
-            <button class="btn btn_register" id="register">Register</button>
-            <button class="btn btn_search" id="search">Searchs</button>
+            <div class="btn-group">
+              <button class="btn btn_register" id="register"> <i class="fas fa-pencil-alt"></i><i class="btn-name">Register</i></button>
+              <button class="btn btn_search" id="search"> <i class="fas fa-search"></i><i class="btn-name">Search</i></button>
+            </div>
           </div>
         </section>
         <section class="search-result" id="search_result"></section>

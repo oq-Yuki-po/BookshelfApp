@@ -3,6 +3,7 @@
    v4.0 | 20180602
    License: none (public domain)
 */
+@import url(../node_modules/@fortawesome/fontawesome-free/css/all.css);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -1117,23 +1118,29 @@ body.swal2-no-backdrop .swal2-shown {
   font-family: "ChangaOne";
   src: url("../fonts/ChangaOne.ttf") format("truetype"); }
 
-.search-main {
+.search-container {
   display: flex;
   height: 100vh;
+  width: 100%;
   position: relative; }
 
 .search {
   height: 100%;
   width: 20%;
   background: linear-gradient(rgba(185, 255, 144, 0.87), rgba(110, 255, 27, 0.87));
-  display: inline-block;
+  display: block;
   transition: 0.8s; }
+  @media screen and (max-width: 414px) {
+    .search {
+      width: 0%; } }
   .search.hidden {
     width: 0%; }
   .search-form {
     display: block;
     padding-top: 120px;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    padding-left: 1em;
+    padding-right: 1em; }
     .search-form.hidden {
       display: none; }
     .search-form-label {
@@ -1141,7 +1148,7 @@ body.swal2-no-backdrop .swal2-shown {
       display: block; }
     .search-form-text {
       display: block;
-      width: 80%;
+      width: 95%;
       border-radius: 5px;
       margin: 5px;
       height: 25px;
@@ -1152,12 +1159,14 @@ body.swal2-no-backdrop .swal2-shown {
   padding-top: 120px;
   box-sizing: border-box;
   width: 80%;
-  display: inline-block;
+  display: block;
   overflow-y: auto;
-  transition: 0.8s; }
+  transition: 0.8s;
+  background-image: url(../img/book_background.jpg);
+  background-size: cover; }
   .search-result.hidden {
-    width: 100%;
-    margin-left: 40PX; }
+    padding-left: 35px;
+    width: 100%; }
 
 .panel {
   display: block;
@@ -1167,6 +1176,7 @@ body.swal2-no-backdrop .swal2-shown {
   border-radius: 10px;
   padding: 5px;
   margin: 5px;
+  background: #fff;
   display: inline-block;
   border: 2px solid #0000004f; }
 
@@ -1189,16 +1199,58 @@ body.swal2-no-backdrop .swal2-shown {
 .swal2-image {
   border: 1px solid black; }
 
+@font-face {
+  font-family: "ChangaOne";
+  src: url("../fonts/ChangaOne.ttf") format("truetype"); }
+
+.btn-group {
+  display: flex;
+  flex-direction: column; }
+
+.btn {
+  width: 85%;
+  padding: 0.5em;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.4s;
+  font-size: 20px;
+  margin-left: 1em;
+  margin-top: 0.5em;
+  margin-right: 1em; }
+  .btn:hover {
+    color: #fff;
+    cursor: pointer; }
+  @media screen and (max-width: 1000px) {
+    .btn-name {
+      display: none; } }
+
+.btn_search {
+  color: #25dcf8;
+  border-color: #25dcf8;
+  border-style: solid;
+  border-width: 2px; }
+  .btn_search:hover {
+    background: #25dcf8; }
+
+.btn_register {
+  color: #eb229b;
+  border-color: #eb229b;
+  border-style: solid;
+  border-width: 2px; }
+  .btn_register:hover {
+    background: #eb229b; }
+
 .menu-trigger,
 .menu-trigger span {
   display: block;
-  transition: all 0.4s;
+  transition: all 0.6s;
   box-sizing: border-box; }
 
 .menu-trigger {
   position: absolute;
   width: 35px;
-  height: 36px;
+  height: 40px;
   top: 80px;
   left: 6px; }
   .menu-trigger span {
@@ -1223,7 +1275,7 @@ body.swal2-no-backdrop .swal2-shown {
         border-radius: 4px;
         transition: all 0.4s; }
     .menu-trigger span:nth-of-type(3) {
-      bottom: 5px; }
+      bottom: 8px; }
   .menu-trigger.active span:nth-of-type(1) {
     transform: translateY(20px) scale(0); }
   .menu-trigger.active span:nth-of-type(2) {
@@ -1232,36 +1284,3 @@ body.swal2-no-backdrop .swal2-shown {
     transform: rotate(90deg); }
   .menu-trigger.active span:nth-of-type(3) {
     transform: translateY(-20px) scale(0); }
-
-.btn {
-  width: 45%;
-  padding: 0.8em;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 10px;
-  transition: .4s;
-  font-size: 14px;
-  display: inline-block; }
-
-.btn:hover {
-  background: #22d0eb;
-  color: #fff;
-  cursor: pointer; }
-
-.btn_search {
-  color: #22d0eb;
-  border: 2px solid #22d0eb; }
-
-.btn_search:hover {
-  background: #22d0eb;
-  color: #fff;
-  cursor: pointer; }
-
-.btn_register {
-  color: #eb229b;
-  border: 2px solid #eb229b; }
-
-.btn_register:hover {
-  background: #eb229b;
-  color: #fff;
-  cursor: pointer; }

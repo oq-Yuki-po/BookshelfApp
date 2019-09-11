@@ -2,6 +2,8 @@ window.onscroll = function()
 {   
     var targetHeight = document.getElementById('float-menu-target').clientHeight;
     var current_height = document.documentElement.scrollTop || document.body.scrollTop;
+    var menu_top = document.getElementById('top');
+    var menu_search = document.getElementById('menu-search');
     var header = document.getElementById('float-menu')
     if(current_height > targetHeight -10){
         header.classList.add("float-active");
