@@ -1,0 +1,56 @@
+@import "_variable";
+
+$btn-search-color: rgb(37, 220, 248);
+$btn-register-color: rgb(235, 34, 155);
+$btn-hover-color: #fff;
+$btn-border-width: 2px;
+
+.btn-group{
+  display: flex;
+  flex-direction:column;
+  @include mq(md) {
+    
+   }
+}
+
+.btn {
+  width: 85%;
+  padding: $sapce-sm;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.4s;
+  font-size: $font_size-md;
+  margin-left: $sapce-md;
+  margin-top: $sapce-sm;
+  margin-right: $sapce-md;
+  &:hover {
+    color: $btn-hover-color;
+    cursor: pointer;
+  }
+  @include mq(lg) {
+    &-name{
+       display: none;
+      }
+  }
+}
+
+.btn_search {
+  color: $btn-search-color;
+  border-color: $btn-search-color;
+  border-style: solid;
+  border-width: $btn-border-width;
+  &:hover {
+    background: $btn-search-color;
+  }
+}
+
+.btn_register {
+  color: $btn-register-color;
+  border-color: $btn-register-color;
+  border-style: solid;
+  border-width: $btn-border-width;
+  &:hover {
+    background: $btn-register-color;
+  }
+}

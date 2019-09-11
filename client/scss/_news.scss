@@ -1,0 +1,38 @@
+@import "_variable";
+
+$font_family-title: "Meiryo";
+$font_family-news: "Meiryo";
+$news_background_color: rgb(255, 255, 255);
+$news_box_height: 5em;
+
+.news {
+  width: 60%;
+  height: $news_box_height;
+  overflow-y: scroll;
+  margin: 0 auto;
+  border-radius: 5px;
+  background: $news_background_color;
+  padding: $sapce-md;
+  margin-top: $sapce-md;
+  &-item {
+    margin-bottom: $sapce-sm;
+  }
+  &-date {
+    margin-right: $sapce-sm;
+    font-size: $font_size-md;
+    color: #e37b89;
+    font-family: $font_family-news;
+  }
+  &-link {
+    transition: 0.3s;
+    &:hover {
+      color: #ff640b;
+      transition: 0.3s;
+    }
+  }
+  &-title {
+    font-size: $font_size-md;
+    font-family: $font_family-news;
+    cursor: pointer;
+  }
+}

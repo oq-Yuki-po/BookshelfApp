@@ -1,0 +1,16 @@
+-
+  var news = [
+    {date:'2019.08.01',title:"Devloper's Library 公開"},
+    {date:'2019.08.13',title:'サイトリニューアル'},
+    ]
+
+section#news.container.container-ornament
+  h2.container-title
+    span NEWS
+  .container-body
+    ul.news
+      each item in news
+        li.news-item
+          a.news-link
+          span.news-date #{item['date']}
+          span.news-title #{item['title']}

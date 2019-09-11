@@ -1,36 +1,44 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-<head>
-    <meta charset="UTF-8" />
-    <title>Book Search</title>
-    <link rel="stylesheet" type="text/css" href="../css/books.css" />
-    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-</head>
-
-<body>
-    <section id="side">
-        <div class="input_form">
-            <label for="title">TITLE</label>
-            <input type="text" id="title" placeholder="TITLE"></input>
-        </div>
-        <div class="input_form">
-            <label for="author">AUTHOR</label>
-            <input type="text" id="author" placeholder="AUTHOR"></input>
-        </div>
-        <button id="search" class="btn btn_search"><i class="fas fa-search fa-lg"></i></button>
-        <div class="input_form">
-            <label for="isbn">ISBN</label>
-            <input type="text" id="isbn" placeholder="ISBN"></input>
-            <button id="register" class="btn btn_register"><i class="fas fa-book"></i></button>
-        </div>
-        
-    </section>
-    <section id="search_result">
-    </section>
-
+  <head>
+    <meta charset="UTF-8">
+    <title>Book Shelf</title>
+    <link rel="stylesheet" href="../css/main.css">
+  </head>
+  <body>
+    <header class="header" id="float-menu">
+      <h1 class="header-title">Developer's Library</h1>
+      <nav class="header-nav">
+        <ul class="header-menu">
+          <li class="menu-item"><a class="menu-link" href="#float-menu-target">TOP</a></li>
+          <li class="menu-item"><a class="menu-link" href="#menu-search">SEARCH</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero" id="float-menu-target">
+        <h2 class="hero-title">Developer's Library</h2>
+      </section>
+      <section class="search-container" id="menu-search"><a class="menu-trigger active" id="menu-trigger"><span></span><span></span><span></span></a>
+        <section class="search" id="search-area">
+          <div class="search-form" id="search-form">
+            <label class="search-form-label" for="title">タイトル</label>
+            <input class="search-form-text" type="text" placeholder="TITLE" id="title">
+            <label class="search-form-label" for="author">著者</label>
+            <input class="search-form-text" type="text" placeholder="AUTHOR" id="author">
+            <label class="search-form-label" for="isbn">ISBN</label>
+            <input class="search-form-text" type="text" placeholder="ISBN" id="isbn">
+            <div class="btn-group">
+              <button class="btn btn_register" id="register"> <i class="fas fa-pencil-alt"></i><i class="btn-name">Register</i></button>
+              <button class="btn btn_search" id="search"> <i class="fas fa-search"></i><i class="btn-name">Search</i></button>
+            </div>
+          </div>
+        </section>
+        <section class="search-result" id="search_result"></section>
+      </section>
+    </main>
+    <script type="text/javascript" src="../js/main.js"></script>
     <script type="text/javascript" src="../js/books.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-</body>
-
+    <script type="text/javascript" src="../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+  </body>
 </html>

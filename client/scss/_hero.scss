@@ -1,0 +1,22 @@
+@import "_variable";
+
+$font_color-default:rgb(39, 39, 39);
+
+.hero {
+    height: 100vh;
+    background-image: url(../img/hero.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &-title {
+        font-size: $font_size-xll;
+        font-weight: bold;
+        color: $font_color-default;
+        text-shadow: 4px 2px 2px rgb(231, 231, 231);
+    }
+}

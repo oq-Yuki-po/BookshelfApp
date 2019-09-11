@@ -1,0 +1,31 @@
+$breakpoints: (
+  "sm": "screen and (max-width: 414px)",
+  "md": "screen and (max-width: 768px)",
+  "lg": "screen and (max-width: 1000px)",
+  "xl": "screen and (max-width: 1200px)"
+) !default;
+
+@mixin mq($breakpoint: sm) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@font-face {
+  font-family: "ChangaOne";
+  src: url("../fonts/ChangaOne.ttf") format("truetype");
+}
+
+$header_height: 80px;
+$humburgur_height: 40px;
+$humburgur_width: 35px;
+
+$sapce-sm:0.5em;
+$sapce-md:1em;
+$sapce-lg:4.5em;
+
+$font_size-sm:12px;
+$font_size-md:20px;
+$font_size-lg:28px;
+$font_size-xl:38px;
+$font_size-xll:50px;

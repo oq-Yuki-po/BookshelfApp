@@ -1,0 +1,15 @@
+doctype html
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    title Book Shelf
+    link(rel="stylesheet", href="../css/main.css")
+  body
+    include _header.pug
+    main
+      include _top.pug
+      include _search.pug
+      
+    script(type="text/javascript",src="../js/main.js")
+    script(type="text/javascript",src="../js/books.js")
+    script(type="text/javascript",src="../node_modules/sweetalert2/dist/sweetalert2.all.min.js")
