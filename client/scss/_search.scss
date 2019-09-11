@@ -1,19 +1,21 @@
 @import "_variable";
 
-$humburgur_height: 40px;
-
 $side-bar-color: linear-gradient(rgba(185, 255, 144, 0.87), rgba(110, 255, 27, 0.87));
-.search-main {
+.search-container {
   display: flex;
   height: 100vh;
+  width: 100%;
   position: relative;
 }
 .search {
   height: 100%;
   width: 20%;
   background: $side-bar-color;
-  display: inline-block;
+  display: block;
   transition: 0.8s;
+  @include mq(sm) {
+    width:0%;
+  }
   &.hidden{
     width: 0%;
   }
@@ -21,6 +23,8 @@ $side-bar-color: linear-gradient(rgba(185, 255, 144, 0.87), rgba(110, 255, 27, 0
     display: block;
     padding-top: $header_height + $humburgur_height;
     box-sizing: border-box;
+    padding-left: $sapce-md;
+    padding-right: $sapce-md;
     &.hidden{
       display: none;
     }
@@ -30,7 +34,7 @@ $side-bar-color: linear-gradient(rgba(185, 255, 144, 0.87), rgba(110, 255, 27, 0
     }
     &-text {
       display: block;
-      width: 80%;
+      width: 95%;
       border-radius: 5px;
       margin: 5px;
       height: 25px;
@@ -44,12 +48,14 @@ $side-bar-color: linear-gradient(rgba(185, 255, 144, 0.87), rgba(110, 255, 27, 0
   padding-top: $header_height + $humburgur_height;
   box-sizing: border-box;
   width: 80%;
-  display: inline-block;
+  display: block;
   overflow-y: auto;
   transition: 0.8s;
+  background-image: url(../img/book_background.jpg);
+  background-size: cover;
   &.hidden{
+    padding-left: $humburgur_width;
     width: 100%;
-    margin-left: 40PX;
   }
 }
 .panel {
@@ -60,6 +66,7 @@ $side-bar-color: linear-gradient(rgba(185, 255, 144, 0.87), rgba(110, 255, 27, 0
   border-radius: 10px;
   padding: 5px;
   margin: 5px;
+  background: #fff;
   display: inline-block;
   border: 2px solid #0000004f;
 }
@@ -85,60 +92,4 @@ $side-bar-color: linear-gradient(rgba(185, 255, 144, 0.87), rgba(110, 255, 27, 0
 
 .swal2-image {
   border: 1px solid black;
-}
-
-.menu-trigger,
-.menu-trigger span {
-  display: block;
-  transition: all 0.4s;
-  box-sizing: border-box;
-}
-.menu-trigger {
-  position: absolute;
-  width: 35px;
-  height: 36px;
-  top: $header_height;
-  left: 6px;
-  & span {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: rgb(0, 0, 0);
-    border-radius: 4px;
-    &:nth-of-type(1) {
-      top: 8px;
-    }
-    &:nth-of-type(2) {
-      top: 18px;
-      &::after {
-        position: absolute;
-        top: 0;
-        left: 0;
-        content: "";
-        width: 100%;
-        height: 3px;
-        background-color: rgb(0, 0, 0);
-        border-radius: 4px;
-        transition: all 0.4s;
-      }
-    }
-    &:nth-of-type(3) {
-      bottom: 5px;
-    }
-  }
-  &.active{
-    & span:nth-of-type(1) {
-      transform: translateY(20px) scale(0);
-    }
-    & span:nth-of-type(2) {
-      transform: rotate(-45deg);
-    }
-    & span:nth-of-type(2)::after {
-      transform: rotate(90deg);
-    }
-    & span:nth-of-type(3) {
-      transform: translateY(-20px) scale(0);
-    }
-  }
 }
